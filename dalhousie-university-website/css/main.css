@@ -1,0 +1,343 @@
+/* Main CSS file for th webpage */
+body{
+    display: grid;
+    /* Used repeat() function to repeat the same dimensions for each column and minmax() function for defining min and max dimensions */
+    grid-template-columns: repeat(6,minmax(100px,1fr));
+    /* Used repeat function to repeat the same dimensions for each row and minmax() function for defining min and max dimensions */
+	grid-template-rows: repeat(4,minmax(50px,auto));
+    /* Used rid-template-areas as to specify place for each sections in the webpage*/
+    grid-template-areas: "banner banner banner banner banner banner"
+                         "primary-nav primary-nav primary-nav primary-nav primary-nav primary-nav"
+                         "pg-main-content pg-main-content pg-main-content pg-main-content pg-main-content pg-main-content "
+                         "footer footer footer footer footer footer ";
+}
+
+/* Styling for page header */
+.pg-header{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    /* Used grid as to align or display content in appropriate manner*/
+    display: grid;
+    grid-template-columns: repeat(6,minmax(50px,1fr));
+    grid-template-rows: repeat(1,minmax(10px,1fr));
+    background-color:#002a5c;
+    color: white;
+    text-align: center;
+    font-style: oblique;
+    border-bottom: 3px black solid;
+}
+/* Styling for page footer */
+.pg-footer{
+    background-color:#002a5c;
+    grid-column: 1/-1;
+    grid-row: -2/-1;
+    display:grid;
+    grid-template-columns: repeat(14,minmax(98px,1fr));
+	grid-template-rows: repeat(4,minmax(50px,auto));
+    gap:5px;
+    border-top: 3px black solid;
+}
+/* Styling for navigation links */
+.navigation-links{
+    display: flex;
+    background-color: #485667;
+    grid-area: primary-nav;
+    justify-content: center;
+    padding-top: 10px;
+    border-bottom: 3px solid white;
+}
+.primary-nav a{
+    color: white;
+    padding-right: 20px;
+}
+.second-nav{
+    background-color: black;
+    margin-top:5px;
+}
+.second-nav a{
+    color: white;
+}
+.second-nav ul{
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* Used hover for primary navigation link */
+.primary-nav a:hover{ 
+    color: black;
+}
+/* Used hover for secondary navigation link */
+.second-nav a:hover{
+    background-color: gold;
+    padding: 3px;
+    color:black;
+}
+
+/* Styling for main section of the webpage */
+.pg-main-content{
+    /* Used grid as to align or display content in appropriate manner*/
+    display: grid;
+    grid-template-columns: repeat(14,minmax(98px,1fr));
+	grid-template-rows: repeat(14,minmax(10px,auto));
+    gap:10px;
+    border-bottom: 5px solid white;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside the class*/
+.item1{
+    display: flex;
+    background-color: gainsboro;
+    grid-column: 1/15;
+    grid-row: 1/3;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside the class  */
+.item2{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: antiquewhite;
+    grid-column: 2/8;
+    grid-row: 4/5;
+    align-items: center;
+}
+.heading-1{
+    grid-column: 1/15;
+    grid-row: 3/4;
+    padding-left: 40%;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.item3{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: antiquewhite;
+    grid-column: 2/8;
+    grid-row: 5/7;
+    align-items: center;
+
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.item4{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: antiquewhite;
+    grid-column: 8/14;
+    grid-row: 4/5;
+    align-items: center;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.item5{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: antiquewhite;
+    grid-column: 8/14;
+    grid-row: 5/7;
+    align-items: center;
+}
+.heading-2{
+    grid-column: 1/15;
+    grid-row: 7/8;
+    padding-left: 40%;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.item6{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: antiquewhite;
+    grid-column: 2/4;
+    grid-row: 8/10;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.item7{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: antiquewhite;
+    grid-column: 4/6;
+    grid-row: 8/10;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.item8{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: antiquewhite;
+    grid-column: 6/8;
+    grid-row: 8/10;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.item9{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: antiquewhite;
+    grid-column: 8/10;
+    grid-row: 8/10;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.item10{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: antiquewhite;
+    grid-column: 10/12;
+    grid-row: 8/10;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.item11{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: antiquewhite;
+    grid-column: 12/14;
+    grid-row: 8/10;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.item12{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: antiquewhite;
+    grid-column: 2/8;
+    grid-row: 11/14;
+    overflow: auto;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.item13{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: antiquewhite;
+    grid-column: 8/14;
+    grid-row: 11/14;
+}
+
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.footer-heading{
+    display: flex;
+    color:white;
+    grid-column: 6/10;
+    grid-row: 1/4;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    /*Used font-family to change font style*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.footer_links1{
+    display:flex;
+    grid-column: 1/6;
+    grid-row:1/4;
+    color:white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.footer_links2{
+    padding-top: 20px;
+    display:flex;
+    color:white;
+    grid-column: 10/15;
+    grid-row:1/4;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Styling for the links in the footer */
+.footer_links1 a{
+    color:white;
+    padding-bottom: 30px;
+}
+.footer_links2 a{
+    color:white;
+    padding-bottom: 30px;
+}
+/* Used grid-column and grid-row to align content at that specific place and used flex property for aligning all items properly inside that class  */
+.footer_3{
+    display: flex;
+    grid-column: 4/12;
+    grid-row: 4/5;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    padding-left: 45px;
+}
+/* Defining the size of logo for website */
+img#dal-logo{
+    width: 80px;
+}
+/* Defining the size of logo for website */
+img#dal-logo1{
+    width: 80px;
+}
+/* Used grid-row and grid-column for aligning the heading in page header */
+.pg-header h1{
+    grid-row: 2/3;
+    grid-column: 3/5;
+    padding-left: 70px;
+}
+/* Used grid-row and grid-column for aligning the image in page header */
+.pg-header img{
+    grid-row: 2/3;
+    grid-column: 3/4;
+    padding-bottom: 5px;
+}
+/* Defining the size of image */
+.section1-img{
+    width:546px;
+    padding-top: 10px;
+}
+/* Defining the size of image */
+.section2-img{
+    width:205px;
+}
+/* Defining the size of image */
+.section3-img{
+    width:635px;
+}
+.heading-3{
+    grid-column: 1/15;
+    grid-row: 10/11;
+    padding-left:45%;
+}
+/* Styling for sumbit feedback link */
+.submit{
+    grid-column: 1/15;
+    grid-row: 14/15;
+    padding-left: 42%;
+    padding-bottom: 10px;
+}
+/* Defining the size of image */
+#main-img{
+    height:500px;
+}
+.item2 a:hover{
+    color: red;
+ }
+.item3 a:hover{
+    color: red;
+}
+.item4 a:hover{
+    color: red;
+}
+.item5 a:hover{
+    color: red;
+}
+.item12 a:hover{
+    color: red;
+}
+.item13 a:hover{
+    color: red;
+} 
+
+/* Styled all the links of main section */
+.all_links{
+    text-decoration: none;
+    color:black;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
